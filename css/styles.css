@@ -120,7 +120,7 @@ body {
 }
 
 .menu-address {
-  display: inline-flex;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-left: 0;
@@ -138,12 +138,19 @@ body {
   color: var(--changing-text-color);
 }
 
-.mail-link {
-  display: inline-flex;
+.menu-address > .mail-link {
+  display: flex;
+  align-items: center;
   width: 161px;
   height: 16px;
   margin-right: 30px;
-  align-items: center;
+}
+
+.envelopemail {
+  display: flex;
+  width: 16px;
+  height: 12px;
+  fill: var(--secondary-text-color);
 }
 
 .phone-link {
@@ -538,25 +545,24 @@ body {
 }
 
 .call-link {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: calc((100% - 10px * 3) / 4);
+  width: 44px;
   height: 44px;
   background: var(--third-text-color);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  background-size: 20px;
 }
 
-.call-link:hover,
+/* .call-link:hover,
 .call-link:focus {
   background-color: var(--changing-text-color);
 }
 
-/* .inst {
+.inst {
   background-image: url(../image/instagram-1.svg);
 }
 
@@ -574,6 +580,21 @@ body {
 
 .call-link:not(:last-child) {
   margin-right: 10px;
+}
+
+.call-link:hover,
+.call-link:focus {
+  background-color: var(--changing-text-color);
+}
+
+.call-icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  fill: var(--third-text-color);
+}
+
+.inst {
 }
 
 .social-footer {

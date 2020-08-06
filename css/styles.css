@@ -499,7 +499,7 @@ body {
 
 .logo-link:hover,
 .logo-link:focus {
-  border: solid #2196f3;
+  border: 1px solid #2196f3;
   border-radius: 4px;
   fill: var(--changing-text-color);
 }

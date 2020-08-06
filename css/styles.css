@@ -127,7 +127,10 @@ body {
 }
 
 .menu-address .link {
-  color: #757575;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-text-color);
+  fill: var(--secondary-text-color);
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
@@ -136,6 +139,7 @@ body {
 .menu-address .link:hover,
 .menu-address .link:focus {
   color: var(--changing-text-color);
+  fill: var(--changing-text-color);
 }
 
 .menu-address > .mail-link {
@@ -148,9 +152,14 @@ body {
 
 .envelopemail {
   display: flex;
-  width: 16px;
-  height: 12px;
-  fill: var(--secondary-text-color);
+  margin-right: 10px;
+}
+
+.email-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
 }
 
 .phone-link {
@@ -158,17 +167,6 @@ body {
   width: 161px;
   height: 16px;
   align-items: center;
-}
-
-.phone-link::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 15px;
-  margin-right: 10px;
-  background-image: url(../image/smartphone.svg);
-  background-size: contain;
-  background-position: center;
 }
 
 .hero > .hero-title {
@@ -195,11 +193,11 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #2f303a;
+  background-color: #c4c4c4;
   background-image: linear-gradient(
       to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
     url(../image/hero-image.jpg);
   background-repeat: no-repeat;
@@ -256,7 +254,7 @@ body {
   content: "";
   height: 120px;
   background-color: #f5f4fa;
-  background-image: url(../image/clock-1.jpg);
+  background-image: url(../image/clock-1.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
@@ -267,7 +265,7 @@ body {
   content: "";
   height: 120px;
   background-color: #f5f4fa;
-  background-image: url(../image/diagram-1.jpg);
+  background-image: url(../image/diagram-1.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
@@ -278,7 +276,7 @@ body {
   content: "";
   height: 120px;
   background-color: #f5f4fa;
-  background-image: url(../image/astronaut-1.jpg);
+  background-image: url(../image/astronaut-1.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
@@ -412,15 +410,36 @@ body {
 }
 
 .social-link {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: calc((100% - 10px * 3) / 4);
+  width: 44px;
   height: 44px;
+  background: var(--third-text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  fill: #afb1b8;
 }
 
-.social-link:not(:last-child) {
+.social-block {
+  display: inline-flex;
+}
+
+.social-block:not(:last-child) {
   margin-right: 10px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--changing-text-color);
+  fill: var(--third-text-color);
+}
+
+.social-icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
 }
 
 .clients {
@@ -432,17 +451,17 @@ body {
 
 .clients-list {
   display: flex;
-  width: calc(((100% - 30px * 5) / 6));
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
 }
 
-.clients-list:hover,
-.clients-list:focus {
-  border: 1px solid #2196f3;
+.clients-list:not(:last-child) {
+  margin-right: 30px;
 }
 
-.clients-list.one {
+/* .clients-list.one {
   padding: 20px 63px;
 }
 
@@ -464,10 +483,31 @@ body {
 
 .clients-list.six {
   padding: 22px 40px;
+} */
+
+.logo-link {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
 }
 
-.clients-list:not(:last-child) {
-  margin-right: 30px;
+.logo-link:hover,
+.logo-link:focus {
+  border: solid #2196f3;
+  border-radius: 4px;
+  fill: var(--changing-text-color);
+}
+
+.logo-1 {
+  display: flex;
+  background-repeat: no-repeat;
+  align-items: center;
 }
 
 .clients-padding {
@@ -542,6 +582,14 @@ body {
   margin-bottom: 20px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.social-footer-link {
+  display: inline-flex;
+}
+
+.social-footer-link:not(:last-child) {
+  margin-right: 10px;
 }
 
 .call-link {

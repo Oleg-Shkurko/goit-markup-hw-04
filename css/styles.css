@@ -734,13 +734,16 @@ body {
   border: 1px solid transparent;
 }
 
+.filter-link {
+}
+
 .filter-link:not(:last-child) {
   margin-right: 8px;
 }
 
 .section .section-filter .link {
   color: var(--primery-text-color);
-  background: var(--third-text-color);
+  background: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -754,6 +757,8 @@ body {
 .section .section-filter .link:active {
   color: var(--third-text-color);
   background: var(--changing-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .section .section-group {

@@ -56,6 +56,7 @@ body {
 }
 
 .top-header {
+  border: 1px solid #ececec;
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -764,18 +765,8 @@ body {
 
 .group-list {
   padding-bottom: 20px;
-  border: 1px solid #eeeeee;
   width: calc(((100% - 30px * 2) / 3));
   box-sizing: border-box;
-}
-
-.group-list:hover,
-.group-list:focus,
-.group-list:active {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .group-list:not(:nth-child(3n)) {
@@ -786,9 +777,20 @@ body {
   margin-bottom: 30px;
 }
 
-.section .section-group .link {
+.web-sites {
+  display: block;
+  border: 1px solid #eeeeee;
   color: var(--primery-text-color);
   text-decoration: none;
+}
+
+.web-sites:hover,
+.web-sites:focus,
+.web-sites:active {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .section .section-group .link > h3 {
